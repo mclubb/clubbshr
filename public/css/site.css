@@ -1,0 +1,26 @@
+body {
+    margin: 0 0;
+    padding: 0;
+}
+
+.banner {
+    height: 500px;
+    background-image: url('/images/wood.jpeg');
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+}
+
+.banner span {
+    font-size: 72px;
+    font-weight: bold;
+}    
+
+.services { 
+    margin-top: -75px;
+}
+
+.service {
+    background-color: #fff;
+    text-align: center;
+}
