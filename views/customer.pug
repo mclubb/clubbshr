@@ -1,0 +1,68 @@
+extends administration.pug
+
+block admincontent
+    div.container
+        div.row 
+            div.col-md-12
+                h2 Customer Information
+        div.row
+            div.col-md-12
+                table.table
+                    thead
+                        th Name
+                        th Address
+                        th City
+                        th State
+                        th Zip
+                        th Phone
+                        th Email
+                    tbody
+                        tr
+                            td
+                                - var href = "/administration/customers/" + customer._id.toString();
+                                a(href=`${href}`) #{customer.name}
+                            td #{customer.address}
+                            td #{customer.city}
+                            td #{customer.state}
+                            td #{customer.zip}
+                            td #{customer.phone}
+                            td #{customer.email}
+        div.row 
+            div.col-md-12
+                h2 Properties
+        div.row
+            div.col-md-12
+                a(href="/administration/customer/property/add") Add New Property
+        div.row
+            div.col-md-12
+                table.table
+                    thead
+                        th Address
+                        th City
+                        th State
+                        th Zip
+        div.row 
+            div.col-md-12
+                h2 Estimates
+        div.row
+            div.col-md-12
+                a(href="/administration/customer/property/add") Add New Estimate
+        div.row
+            div.col-md-12
+                table.table
+                    thead
+                        th Estimate Number
+                        th Date
+                        th Description
+                        th Amount
+        div.row 
+            div.col-md-12
+                h2 Invoices
+        div.row
+            div.col-md-12
+                table.table
+                    thead
+                        th Invoice Number
+                        th Date
+                        th Description
+                        th Amount

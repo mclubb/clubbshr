@@ -1,0 +1,30 @@
+extends administration.pug
+
+block admincontent
+    div.container
+        div.row
+            div.col-md-12
+                a(href="/administration/customers/add") Add New Customer
+        div.row
+            div.col-md-12
+                table.table
+                    thead
+                        th Customer Name
+                        th Customer Address
+                        th Customer City
+                        th Customer State
+                        th Customer Zip
+                        th Customer Phone
+                        th Customer Email
+                    tbody
+                        each customer in customers
+                            tr
+                                td
+                                    - var href = "/administration/customers/" + customer._id.toString();
+                                    a(href=`${href}`) #{customer.name}
+                                td #{customer.address}
+                                td #{customer.city}
+                                td #{customer.state}
+                                td #{customer.zip}
+                                td #{customer.phone}
+                                td #{customer.email}

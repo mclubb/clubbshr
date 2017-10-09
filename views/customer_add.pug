@@ -1,0 +1,39 @@
+
+extends administration.pug
+
+block admincontent
+    div.container
+        div.row
+            div
+                form(method="POST")
+                    div.form-group.row
+                        label.col-md-2.col-form-label Name
+                        div.col-md-10
+                            input.form-control(type="text" name="customer_name")
+                    div.form-group.row
+                        label.col-md-2.col-form-label Address
+                        div.col-md-10
+                            input.form-control(type="text" name="customer_address")
+                    div.form-group.row
+                        label.col-md-2.col-form-label City
+                        div.col-md-10
+                            input.form-control(type="text" name="customer_city")
+                    div.form-group.row
+                        label.col-md-2.col-form-label State
+                        div.col-md-10
+                            input.form-control(type="text" name="customer_state")
+                    div.form-group.row
+                        label.col-md-2.col-form-label Zip
+                        div.col-md-10
+                            input.form-control(type="text" name="customer_zip")
+                    div.form-group.row
+                        label.col-md-2.col-form-label Phone
+                        div.col-md-10
+                            input.form-control(type="tel" name="customer_phone")
+                    div.form-group.row
+                        label.col-md-2.col-form-label Email
+                        div.col-md-10
+                            input.form-control(type="email" name="customer_email")
+                    div.form-group.row
+                        button.btn.btn-primary(type="submit") Submit
+                    

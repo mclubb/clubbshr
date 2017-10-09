@@ -16,6 +16,8 @@ app.use(body_parser.json());
 
 app.use(express.static('public'));
 
+app.use('/administration', require('./controllers/administration'));
+
 //var indexRoute = require('./routes/index');
 app.use('/', function(req, res) {
     res.render('index');
